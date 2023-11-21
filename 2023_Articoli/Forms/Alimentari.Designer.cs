@@ -35,7 +35,6 @@
             this.Prezzo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.Anno = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -104,16 +103,6 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(269, 15);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(317, 316);
-            this.listView1.TabIndex = 7;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.List;
-            // 
             // Anno
             // 
             this.Anno.Location = new System.Drawing.Point(13, 129);
@@ -149,7 +138,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Anno);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Prezzo);
@@ -174,7 +162,6 @@
         private System.Windows.Forms.TextBox Prezzo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.TextBox Anno;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;

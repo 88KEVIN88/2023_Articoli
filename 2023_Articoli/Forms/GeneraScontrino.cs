@@ -21,7 +21,7 @@ namespace _2023_Articoli.Forms
         {
            Articolo articolo= new Articolo();
             
-            listView1.Items.Add(articolo.GeneraScontrino());
+            MessageBox.Show(articolo.GeneraScontrino());
 
         }
 

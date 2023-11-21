@@ -40,7 +40,7 @@ namespace _2023_Articoli.Forms
 
            // Crea l'articolo fresco
            Articolo articolo = new ArticoloAlimentare(codice, descrizione, prezzo, giorniConsumo, haTessera);
-            listView1.Items.Add($"Codice:{codice},Descrizione:{descrizione},Prezzo:{prezzo},Giorni:{giorniConsumo},Tessera:{haTessera}");
+            
         }
     }
 }

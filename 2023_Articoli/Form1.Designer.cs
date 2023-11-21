@@ -37,6 +37,8 @@
             this.panelTitlebar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelDekstopPanel = new System.Windows.Forms.Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.button5 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelTitlebar.SuspendLayout();
             this.SuspendLayout();
@@ -152,18 +154,39 @@
             // 
             // panelDekstopPanel
             // 
-            this.panelDekstopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDekstopPanel.Location = new System.Drawing.Point(180, 75);
             this.panelDekstopPanel.Name = "panelDekstopPanel";
-            this.panelDekstopPanel.Size = new System.Drawing.Size(620, 375);
+            this.panelDekstopPanel.Size = new System.Drawing.Size(297, 375);
             this.panelDekstopPanel.TabIndex = 2;
             this.panelDekstopPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDekstopPanel_Paint);
+            // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(499, 82);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(289, 305);
+            this.listView1.TabIndex = 3;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(499, 413);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(289, 23);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Stampa";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.panelDekstopPanel);
             this.Controls.Add(this.panelTitlebar);
             this.Controls.Add(this.panelMenu);
@@ -188,6 +211,8 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panelDekstopPanel;
         private System.Windows.Forms.Panel panel1Logo;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button button5;
     }
 }
 

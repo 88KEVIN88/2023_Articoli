@@ -35,7 +35,7 @@ namespace _2023_Articoli.Forms
 
             // Crea l'articolo fresco
             Articolo articolo = new ArticoloNonAlimentare(codice, descrizione, prezzo, haTessera, riciclabile);
-            listView1.Items.Add($"Codice:{codice},Descrizione:{descrizione},Prezzo:{prezzo},Tessera:{haTessera},Riciclabile:{riciclabile}");
+          
         }
     }
 }

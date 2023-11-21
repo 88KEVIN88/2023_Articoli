@@ -5,6 +5,7 @@ using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using System.Windows.Forms;
 using System.Xml.Schema;
 
 namespace _2023_Articoli
@@ -15,7 +16,7 @@ namespace _2023_Articoli
         private string _descrizione;
         private double _prezzo;
         private bool _tessera;
-        public List<Articolo> listaArticoli = new List<Articolo>();
+       
         public Articolo(int codice, string descrizione, double prezzo, bool tessera)
         {
             Codice = codice; 
@@ -25,9 +26,9 @@ namespace _2023_Articoli
         }
         public Articolo()
         {
-            Codice = 0;
+            Codice = 1;
             Descrizione = "";
-            Prezzo = 0;
+            Prezzo = 1;
             Tessera = false;
         }
         public int Codice
@@ -92,19 +93,49 @@ namespace _2023_Articoli
             }
             return prezzoScontato;
         }
-        public string GeneraScontrino()
-        {
-            double totale = 0;
-            StringBuilder scontrino = new StringBuilder();
-            foreach(var articolo in listaArticoli){
-                articolo.Sconta(Tessera);
-                scontrino.AppendLine($"Nome:{articolo.Descrizione}");
-                scontrino.AppendLine($"Prezzo Unitario:{articolo.Prezzo}");
-                totale += articolo.Prezzo;
-                scontrino.AppendLine($"Totale:{totale}");
+        //public string GeneraScontrino()
+        //{
+        //    double totale = 0;
+        //    StringBuilder scontrino = new StringBuilder();
+        //    foreach(var articolo in listaArticoli){
+        //        articolo.Sconta(Tessera);
+        //        scontrino.AppendLine($"Nome:{articolo.Descrizione}");
+        //        scontrino.AppendLine($"Prezzo Unitario:{articolo.Prezzo}");
+        //        totale += articolo.Prezzo;
+        //        scontrino.AppendLine($"Totale:{totale}");
                
+        //    }
+        //    return scontrino.ToString();
+        //}
+        //public string OttieniElementi()
+        //{
+        //    StringBuilder s = new StringBuilder();
+        //    foreach(var articolo in listaArticoli)
+        //    {
+        //        s.AppendLine($"Codice:{Codice},Descrizione:{Descrizione},Prezzo:{Prezzo}");
+        //    }
+        //    return s.ToString();
+        //}
+       
+        class Cassa
+        {
+            public List<Articolo> listaArticoli { get; private set; } = new List<Articolo>();
+            public void Aggiungi(Articolo articolo)
+            {
+
+                listaArticoli.Add(articolo);
             }
-            return scontrino.ToString();
+            public void Caricalistview(ListView listview)
+            {
+                listview.Items.Clear();
+                foreach (var articolo in listaArticoli)
+                {
+                    ListViewItem item = new ListViewItem(articolo.Codice.ToString());
+                    item.SubItems.Add(articolo.Descrizione);
+                    item.SubItems.Add(articolo.Prezzo.ToString());
+                    listview.Items.Add(item);
+                }
+            }
         }
     }
 }

@@ -117,5 +117,20 @@ namespace _2023_Articoli
         {
 
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+              
+            
+            
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
+           articolo.Aggiungi(new Articolo("001", "prova", 10));
+           articolo.Caricalistview(listView1);
+        }
     }
 }
