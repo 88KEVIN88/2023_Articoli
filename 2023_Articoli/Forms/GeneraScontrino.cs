@@ -19,11 +19,18 @@ namespace _2023_Articoli.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-          
-        }
-        
+           Articolo articolo= new Articolo();
+            
+            listView1.Items.Add(articolo.GeneraScontrino());
 
-        // Metodo per calcolare l'importo totale
-       
+        }
+
+        private void GeneraScontrino_Load(object sender, EventArgs e)
+        {
+          
+           
+
+
+        }
     }
 }

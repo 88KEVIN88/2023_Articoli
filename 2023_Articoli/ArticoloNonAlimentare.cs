@@ -26,10 +26,10 @@ namespace _2023_Articoli
         }
         public bool Riciclabile { get; set; }
 
-        public ArticoloNonAlimentare(int codice, string descrizione, double prezzo, string materiale, bool riciclabile,bool tessera)
+        public ArticoloNonAlimentare(int codice, string descrizione, double prezzo, bool riciclabile,bool tessera)
             : base(codice, descrizione, prezzo,tessera)
         {
-            Materiale = materiale;
+           
             Riciclabile = riciclabile;
         }
 

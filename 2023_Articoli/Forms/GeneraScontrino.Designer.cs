@@ -60,6 +60,7 @@
             this.Controls.Add(this.listView1);
             this.Name = "GeneraScontrino";
             this.Text = "GeneraScontrino";
+            this.Load += new System.EventHandler(this.GeneraScontrino_Load);
             this.ResumeLayout(false);
 
         }

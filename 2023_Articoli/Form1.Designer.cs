@@ -33,10 +33,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel1Logo = new System.Windows.Forms.Panel();
             this.panelTitlebar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelDekstopPanel = new System.Windows.Forms.Panel();
-            this.panel1Logo = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelTitlebar.SuspendLayout();
             this.SuspendLayout();
@@ -119,6 +119,15 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // panel1Logo
+            // 
+            this.panel1Logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(78)))));
+            this.panel1Logo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1Logo.Location = new System.Drawing.Point(0, 0);
+            this.panel1Logo.Name = "panel1Logo";
+            this.panel1Logo.Size = new System.Drawing.Size(180, 75);
+            this.panel1Logo.TabIndex = 0;
+            // 
             // panelTitlebar
             // 
             this.panelTitlebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
@@ -148,15 +157,7 @@
             this.panelDekstopPanel.Name = "panelDekstopPanel";
             this.panelDekstopPanel.Size = new System.Drawing.Size(620, 375);
             this.panelDekstopPanel.TabIndex = 2;
-            // 
-            // panel1Logo
-            // 
-            this.panel1Logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(78)))));
-            this.panel1Logo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1Logo.Location = new System.Drawing.Point(0, 0);
-            this.panel1Logo.Name = "panel1Logo";
-            this.panel1Logo.Size = new System.Drawing.Size(180, 75);
-            this.panel1Logo.TabIndex = 0;
+            this.panelDekstopPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDekstopPanel_Paint);
             // 
             // Form1
             // 

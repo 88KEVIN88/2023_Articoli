@@ -36,8 +36,6 @@
             this.Descrizione = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Codice = new System.Windows.Forms.TextBox();
-            this.Materiale = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -47,7 +45,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(269, 15);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(294, 316);
+            this.listView1.Size = new System.Drawing.Size(320, 316);
             this.listView1.TabIndex = 15;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.SmallIcon;
@@ -56,7 +54,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(137, 174);
+            this.checkBox1.Location = new System.Drawing.Point(123, 133);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(91, 21);
             this.checkBox1.TabIndex = 14;
@@ -114,28 +112,11 @@
             this.Codice.Size = new System.Drawing.Size(100, 20);
             this.Codice.TabIndex = 8;
             // 
-            // Materiale
-            // 
-            this.Materiale.Location = new System.Drawing.Point(12, 137);
-            this.Materiale.Name = "Materiale";
-            this.Materiale.Size = new System.Drawing.Size(100, 20);
-            this.Materiale.TabIndex = 16;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(162, 140);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 17);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Materiale";
-            // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(12, 174);
+            this.checkBox2.Location = new System.Drawing.Point(12, 133);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(90, 21);
             this.checkBox2.TabIndex = 18;
@@ -144,7 +125,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(13, 227);
+            this.button1.Location = new System.Drawing.Point(12, 170);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 19;
@@ -159,8 +140,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.Materiale);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label3);
@@ -187,8 +166,6 @@
         private System.Windows.Forms.TextBox Descrizione;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Codice;
-        private System.Windows.Forms.TextBox Materiale;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Button button1;
     }

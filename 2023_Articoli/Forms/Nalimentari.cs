@@ -29,13 +29,13 @@ namespace _2023_Articoli.Forms
             int codice = int.Parse(Codice.Text);
             string descrizione = Descrizione.Text;
             double prezzo = double.Parse(Prezzo.Text);
-            string giorniConsumo = Materiale.Text;
+           
             bool haTessera = checkBox1.Checked;
             bool riciclabile = checkBox2.Checked;
 
             // Crea l'articolo fresco
-            Articolo articolo = new ArticoloNonAlimentare(codice, descrizione, prezzo, giorniConsumo, haTessera, riciclabile);
-            listView1.Items.Add($"Codice:{codice},Descrizione:{descrizione},Prezzo:{prezzo},Giorni:{giorniConsumo},Tessera:{haTessera},Riciclabile:{riciclabile}");
+            Articolo articolo = new ArticoloNonAlimentare(codice, descrizione, prezzo, haTessera, riciclabile);
+            listView1.Items.Add($"Codice:{codice},Descrizione:{descrizione},Prezzo:{prezzo},Tessera:{haTessera},Riciclabile:{riciclabile}");
         }
     }
 }

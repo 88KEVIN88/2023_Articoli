@@ -112,5 +112,10 @@ namespace _2023_Articoli
         {
             OpenChildForm(new Forms.GeneraScontrino(), sender);
         }
+
+        private void panelDekstopPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -23,12 +23,19 @@ namespace _2023_Articoli
             Prezzo = prezzo; 
             Tessera = tessera; 
         }
+        public Articolo()
+        {
+            Codice = 0;
+            Descrizione = "";
+            Prezzo = 0;
+            Tessera = false;
+        }
         public int Codice
         {
             get { return _codice; } 
             set
             {
-                if(_codice != 0)
+                if(_codice >= 0)
                 {
                    _codice = value;
                 }
@@ -59,7 +66,7 @@ namespace _2023_Articoli
             set
             {
                 _prezzo = value;
-                if(_prezzo != 0)
+                if(_prezzo > 0)
                 {
                     _prezzo = value;
                 }
@@ -84,6 +91,20 @@ namespace _2023_Articoli
                 prezzoScontato *= 0.95;
             }
             return prezzoScontato;
+        }
+        public string GeneraScontrino()
+        {
+            double totale = 0;
+            StringBuilder scontrino = new StringBuilder();
+            foreach(var articolo in listaArticoli){
+                articolo.Sconta(Tessera);
+                scontrino.AppendLine($"Nome:{articolo.Descrizione}");
+                scontrino.AppendLine($"Prezzo Unitario:{articolo.Prezzo}");
+                totale += articolo.Prezzo;
+                scontrino.AppendLine($"Totale:{totale}");
+               
+            }
+            return scontrino.ToString();
         }
     }
 }
